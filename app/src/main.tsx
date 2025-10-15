@@ -8,13 +8,16 @@ import Office from './pages/Office'
 import Manager from './pages/Manager'
 import Admin from './pages/Admin'
 
-const router = createBrowserRouter([
-  { path: '/', element: <App /> },
-  { path: '/employee', element: <Employee /> },
-  { path: '/office', element: <Office /> },
-  { path: '/manager', element: <Manager /> },
-  { path: '/admin', element: <Admin /> },
-])
+const router = createBrowserRouter(
+  [
+    { path: '/', element: <App /> },
+    { path: '/employee', element: <Employee /> },
+    { path: '/office', element: <Office /> },
+    { path: '/manager', element: <Manager /> },
+    { path: '/admin', element: <Admin /> },
+  ],
+  { basename: '/demo' }
+)
 
 function Root() {
   useEffect(() => {
